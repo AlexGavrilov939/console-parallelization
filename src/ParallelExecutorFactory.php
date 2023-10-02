@@ -431,7 +431,7 @@ final class ParallelExecutorFactory
 
     private static function getScriptPath(): string
     {
-        $pwd = $_SERVER['PWD'];
+        $pwd = getcwd();
         $scriptName = $_SERVER['SCRIPT_NAME'];
 
         return 0 === mb_strpos($scriptName, $pwd)
